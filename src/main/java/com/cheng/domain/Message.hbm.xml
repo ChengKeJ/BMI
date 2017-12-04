@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-12-1 19:41:14 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.cheng.domain.Message" table="MESSAGE">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="increment" />
+        </id>
+        <property name="date" type="java.lang.String">
+            <column name="DATE" />
+        </property>
+        <property name="high" type="double">
+            <column name="HIGH" />
+        </property>
+        <property name="weight" type="double">
+            <column name="WEIGHT" />
+        </property>
+        <property name="bmi" type="double">
+            <column name="BMI" />
+        </property>
+    </class>
+</hibernate-mapping>

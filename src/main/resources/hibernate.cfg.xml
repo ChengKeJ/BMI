@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+
+	<!-- 配置一个session-factory session工厂 -->
+
+	<!-- session 是数据库的会话对象 实现数据库的增删改查 -->
+	<session-factory>
+
+		<!-- property 属相键值对的形式 用力啊配置不同的设置选项 -->
+
+		<!-- 用来显示当前操作的sql语句 -->
+		<property name="hibernate.show_sql">true</property>
+		<property name="hibernate.formate_sql">true</property>
+
+		<!-- 用于数据库中表的生成策略 -->
+		<!-- update create create——drop validate -->
+		<property name="hibernate.hbm2ddl.auto">update</property>
+
+		<!-- 设置数据的方言 -->
+		<!-- 为了告诉hibernate 底层用来生成什么样的sql语句 -->
+		<property name="hibernate。dialect">
+			org.hibernate.dialect.MySQLDialect
+		</property>
+
+		<!-- 加载映射文件 -->
+		<!-- 该文件表示java 对象与数据库之间的映射关系 ORM -->
+		<!-- 明确开启currentsession -->
+		<!-- threadLocal 在hibernate 内部 利用threadLocal 维护了一个currentSession -->
+		<property name="current_session_context_class">thread</property>
+
+		<mapping resource="com/cheng/domain/Message.hbm.xml" />
+	</session-factory>
+
+
+</hibernate-configuration>
