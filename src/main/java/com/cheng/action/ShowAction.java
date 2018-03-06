@@ -27,7 +27,7 @@ public class ShowAction extends ActionSupport {
 		this.messageService = messageService;
 	}
 
-	// Õ¹Ê¾ËùÓÐÐÅÏ¢µ½Ç°¶Ë
+	// Õ¹Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½Ç°ï¿½ï¿½
 	public void showAll() throws IOException {
 		HttpServletResponse response = ServletActionContext.getResponse();
 		HttpServletRequest request = ServletActionContext.getRequest();
@@ -39,7 +39,7 @@ public class ShowAction extends ActionSupport {
 		response.getWriter().println(json);
 	}
 
-	// ¸ù¾ÝÇ°¶Ë´«¹ýÀ´µÄid É¾³ý¼ÇÂ¼
+	// ï¿½ï¿½ï¿½ï¿½Ç°ï¿½Ë´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½id É¾ï¿½ï¿½ï¿½ï¿½Â¼
 	public void deleteById() throws IOException {
 
 		HttpServletResponse response = ServletActionContext.getResponse();
@@ -55,7 +55,7 @@ public class ShowAction extends ActionSupport {
 		response.getWriter().println(json);
 	}
 	
-	//¼ÇÂ¼Êý¾Ý
+	//ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½
 	public void record() throws IOException {
 	
 		HttpServletRequest request = ServletActionContext.getRequest();
@@ -68,7 +68,7 @@ public class ShowAction extends ActionSupport {
 		messageService.record(height1, weight1);	
 		
 	}
-	//ÕÒ×îºóÒ»¸öÖµÊý¾Ý¿âÖÐµÄ
+	//ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Öµï¿½ï¿½ï¿½Ý¿ï¿½ï¿½Ðµï¿½
 	public void findLast() throws IOException {
 		HttpServletResponse response = ServletActionContext.getResponse();
 		Message find = messageService.find();
